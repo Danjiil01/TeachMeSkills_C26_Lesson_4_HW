@@ -13,3 +13,19 @@ Let the array size be entered from the console.
 Print the arrays to the console on two separate lines.
 Calculate the arithmetic mean of the elements of each array and
 tell us for which of the arrays this value was greater (or report that their arithmetic means are equal).
+
+Additional tasks consist of other 4 tasks with higher difficulty level.
+
+4. Create an array of n random integers and display it on the screen. Let the array size be set from the console and the array size can be greater than 5 and less than or equal to 10.
+If n does not satisfy the condition, print a message about this.
+If the user has entered an inappropriate number, then the program should ask the user to repeat the input.
+Create a second array from only the even elements of the first array, if they are there, and display it on the screen.
+
+6. Create an array and populate the array. Print the array to the screen as a string.
+Replace each element with an odd index with zero.
+Again, display the array on a separate line.
+
+8. Create an array of strings. Fill it with arbitrary names
+of people. Sort the array. Print the result to the console.
+
+7.Implement the bubble sort algorithm
