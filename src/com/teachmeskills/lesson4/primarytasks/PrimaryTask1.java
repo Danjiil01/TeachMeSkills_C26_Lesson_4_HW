@@ -1,28 +1,45 @@
 package com.teachmeskills.lesson4.primarytasks;
 
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PrimaryTask1 {
     public static void main(String[] args) {
-        int[] array = {87, 93, 103, 98, 654, 93, 77, 1204, 93};
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number you want to remove: ");
-        int removeNum = sc.nextInt();
-        ArrayList<Integer> newArray = new ArrayList<>();
-        boolean found = false;
-        for (int num : array) {
-            if (num != removeNum) {
-                newArray.add(num);
-            } else {
-                found = true;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the size of array: ");
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+
+        System.out.println("Enter the elements: ");
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        System.out.println("Enter the number you want to delete: ");
+        int toRemove = scanner.nextInt();
+
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (array[i] != toRemove) {
+                count++;
             }
         }
-        if (found) {
-            System.out.println("New array without specified: " + newArray);
-        } else {
-            System.out.println("There is no such number in array");
-        }
-    }
 
+        if (count == 0) {
+            System.out.println("There is no such number in array");
+            return;
+        }
+
+        int[] newArray = new int[count];
+        int index = 0;
+        for (int i = 0; i < n; i++) {
+            if (array[i] != toRemove) {
+                newArray[index] = array[i];
+                index++;
+            }
+        }
+
+        System.out.println("New array:");
+        System.out.println(Arrays.toString(newArray));
+    }
 }
